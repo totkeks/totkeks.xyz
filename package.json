@@ -19,6 +19,7 @@
 		"vue": "^3.2.37"
 	},
 	"devDependencies": {
+		"@types/node": "^17.0.42",
 		"@typescript-eslint/eslint-plugin": "^5.27.1",
 		"@typescript-eslint/parser": "^5.27.1",
 		"@vitejs/plugin-vue": "^2.3.3",
@@ -32,11 +33,13 @@
 		"postcss-html": "^1.4.1",
 		"postcss-scss": "^4.0.4",
 		"prettier": "^2.6.2",
+		"sass": "^1.52.3",
 		"stylelint": "^14.9.1",
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-config-recommended-scss": "^6.0.0",
 		"stylelint-config-recommended-vue": "^1.4.0",
 		"typescript": "~4.7.3",
+		"unplugin-vue-components": "^0.19.6",
 		"vite": "^2.9.12",
 		"vue-eslint-parser": "^9.0.2",
 		"vue-tsc": "^0.37.3"
