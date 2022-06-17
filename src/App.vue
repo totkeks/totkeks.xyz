@@ -3,7 +3,9 @@
 		<div v-if="!loaded" class="overlay"></div>
 	</transition>
 
-	<main class="main"></main>
+	<main class="main">
+		<AppHeader />
+	</main>
 
 	<footer class="footer">
 		<AppFooter />
@@ -40,6 +42,10 @@ onMounted(() => {
 
 .main {
 	grid-area: main;
+
+	background-color: var(--background-color);
+	padding: 2.5rem;
+	border-radius: 0.5rem;
 }
 
 .footer {
