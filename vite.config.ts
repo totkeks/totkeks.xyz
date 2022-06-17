@@ -3,9 +3,8 @@ import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import { execSync } from "child_process";
 
-const commitHash = execSync("git rev-parse --short HEAD").toString();
-const now = new Date().toISOString();
-const buildDate = `${now.slice(0, 10)} ${now.slice(11, 16)}`;
+const commitHash = execSync("git rev-parse HEAD").toString().trim();
+const buildDate = Date.now();
 
 export default defineConfig({
 	define: {
