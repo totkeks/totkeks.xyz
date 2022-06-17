@@ -1,0 +1,32 @@
+:root {
+	// Colors
+	--background-color: #ffffff;
+	--background-color-rgb: 255, 255, 255;
+	--background-alt-color: #e1dfe8;
+	--foreground-color: #414f57;
+	--foreground-bold-color: #313f47;
+	--foreground-light-color: #616f77;
+	--border-color: #c8cccf;
+	--accent1-color: #7cecb4;
+	--accent1-color-rgb: 126, 237, 181;
+	--accent2-color: #6c8dff;
+	--accent2-color-rgb: 108, 141, 255;
+	--highlight-color: #91e6cf;
+
+	// Text slider
+	--slider-duration: 0.75s;
+	--slider-transform: translateX(2em);
+}
+
+@function overlay() {
+	$frizzy-overlay: repeat top left / 100px 100px fixed
+		url("@/assets/overlay.png");
+	$gradient-overlay: no-repeat bottom center / cover fixed
+		linear-gradient(
+			60deg,
+			rgba(var(--accent1-color-rgb), 0.5) 5%,
+			rgba(var(--accent2-color-rgb), 0.35)
+		);
+
+	@return ($frizzy-overlay, $gradient-overlay);
+}

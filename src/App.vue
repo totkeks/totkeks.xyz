@@ -1,73 +1,67 @@
 <template>
-	<header>
-		<h1>Norman Dankert</h1>
-		<TextSlider :texts="roles" :period="5000" />
-		<img src="@/assets/avatar.jpg" />
-	</header>
+	<transition name="overlay">
+		<div v-if="!loaded" class="overlay"></div>
+	</transition>
 
-	<main class="main">
-		<ul>
-			<li>Project list (differently structured CV)</li>
-			<li>Special info for recruiters</li>
-		</ul>
-	</main>
+	<main class="main"></main>
 
-	<footer class="footer">
-		<ul>
-			<li>
-				<a href="https://www.linkedin.com/in/norman-dankert/" target="_blank">
-					<IconLinkedIn />
-				</a>
-			</li>
-			<li>
-				<a href="https://github.com/totkeks" target="_blank">
-					<IconGitHub />
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://stackoverflow.com/users/6374587/totkeks"
-					target="_blank"
-				>
-					<IconStackOverflow />
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/totkeks" target="_blank">
-					<Icon name="Twitter" />
-				</a>
-			</li>
-			<li>
-				<a href="https://codepen.io/totkeks" target="_blank">
-					<Icon name="Codepen" />
-				</a>
-			</li>
-		</ul>
-	</footer>
-
-	<footer>Version {{ commitHash }} - Last update {{ buildDate }} UTC</footer>
+	<footer class="footer"></footer>
 </template>
 
-<script setup lang="ts">
-const commitHash = __COMMIT_HASH__;
-const buildDate = __BUILD_DATE__;
-const roles = [
-	"Computer Scientist",
-	"Design System Specialist",
-	"Front-End Developer",
-	"Full Stack Developer",
-	"Hardware Design Engineer",
-	"Intern",
-	"IT Project Manager",
-	"IT Trainee",
-	"Product Owner",
-	"Research Assistant",
-	"Software Engineer",
-];
+<script lang="ts" setup>
+import { onMounted, ref } from "vue";
+
+const loaded = ref(false);
+
+onMounted(() => {
+	loaded.value = true;
+});
 </script>
 
-<style>
+<style lang="scss">
 #app {
-	width: 100vh;
+	display: grid;
+
+	grid-template:
+		". .... ." 2fr
+		". main ." auto
+		". .... ." 3fr
+		"footer footer footer" auto /
+		1fr auto 1fr;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	background: overlay(),
+		no-repeat center / cover fixed url("@/assets/background.avif");
+}
+
+.main {
+	grid-area: main;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.overlay {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 1;
+	z-index: 1;
+	background: overlay(), var(--background-color);
+	pointer-events: none;
+
+	&-leave-active {
+		transition: opacity 1.75s ease-out;
+	}
+
+	&-leave-to {
+		opacity: 0;
+	}
 }
 </style>
