@@ -5,7 +5,9 @@
 
 	<main class="main"></main>
 
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<AppFooter />
+	</footer>
 </template>
 
 <script lang="ts" setup>
