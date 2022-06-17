@@ -52,7 +52,7 @@ const buildDate = new Date(__BUILD_DATE__);
 
 	span {
 		+ span {
-			border-left: 1px solid var(--border-color);
+			border-left: 1px solid rgba(var(--border-color-rgb), 0.2);
 			padding-left: 0.5em;
 			margin-left: 0.5em;
 		}

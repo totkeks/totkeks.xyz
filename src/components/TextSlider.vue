@@ -33,7 +33,7 @@ const interval = setInterval(nextText, props.period);
 onBeforeUnmount(() => clearInterval(interval));
 </script>
 
-<style module>
+<style lang="scss" module>
 .text {
 	display: inline-block;
 

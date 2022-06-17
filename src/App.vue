@@ -3,9 +3,15 @@
 		<div v-if="!loaded" class="overlay"></div>
 	</transition>
 
-	<main class="main">
-		<AppHeader />
-	</main>
+	<div class="card">
+		<header>
+			<AppHeader />
+		</header>
+
+		<main class="main">Content goes here.</main>
+
+		<SocialLinks />
+	</div>
 
 	<footer class="footer">
 		<AppFooter />
@@ -40,12 +46,19 @@ onMounted(() => {
 		no-repeat center / cover fixed url("@/assets/background.avif");
 }
 
-.main {
+.card {
 	grid-area: main;
+	display: grid;
+	grid-template-rows: auto;
+	row-gap: 2.5rem;
 
 	background-color: var(--background-color);
 	padding: 2.5rem;
 	border-radius: 0.5rem;
+}
+
+.main {
+	overflow-y: auto;
 }
 
 .footer {
