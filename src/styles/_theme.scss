@@ -1,7 +1,20 @@
+@use "sass:color";
+
+@mixin generate-color-variables($colors) {
+	@each $name, $hexColor in $colors {
+		--#{$name}: #{$hexColor};
+		--#{$name}-rgb: #{color.red($hexColor)}, #{color.green($hexColor)},
+			#{color.blue($hexColor)};
+	}
+}
+
 :root {
 	// Colors
-	--background-color: #ffffff;
-	--background-color-rgb: 255, 255, 255;
+	$colors: (
+		"background-color": #ffffff,
+	);
+	@include generate-color-variables($colors);
+
 	--background-alt-color: #e1dfe8;
 	--foreground-color: #414f57;
 	--foreground-bold-color: #313f47;
@@ -14,14 +27,19 @@
 	--accent2-color-rgb: 108, 141, 255;
 	--highlight-color: #91e6cf;
 
+	// Card properties
+	--card-padding: 2.5rem;
+	--card-border-radius: 0.5rem;
+
 	// Text slider
 	--slider-duration: 0.75s;
 	--slider-transform: translateX(2em);
+
+	// Typography
+	font: 300 100% Museo Sans, sans-serif;
 }
 
 @function overlay() {
-	$frizzy-overlay: repeat top left / 100px 100px fixed
-		url("@/assets/overlay.png");
 	$gradient-overlay: no-repeat bottom center / cover fixed
 		linear-gradient(
 			60deg,
@@ -29,5 +47,5 @@
 			rgba(var(--accent2-color-rgb), 0.35)
 		);
 
-	@return ($frizzy-overlay, $gradient-overlay);
+	@return $gradient-overlay;
 }
