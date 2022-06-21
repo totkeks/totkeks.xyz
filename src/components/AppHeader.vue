@@ -74,6 +74,7 @@ $letter-spacing-role: 0.2rem;
 .avatar {
 	grid-area: avatar;
 	align-self: center;
+	line-height: 0;
 
 	> img {
 		-webkit-user-drag: none;
