@@ -16,7 +16,8 @@
 		"setup:yarn": "yarn dlx @yarnpkg/sdks vscode"
 	},
 	"dependencies": {
-		"vue": "^3.2.37"
+		"vue": "^3.2.37",
+		"vue-router": "^4.0.16"
 	},
 	"devDependencies": {
 		"@types/node": "^18.0.0",
