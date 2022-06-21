@@ -1,2 +1,18 @@
 @import "reset";
 @import "fonts";
+
+:root {
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.textlink {
+	text-decoration: underline dotted;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

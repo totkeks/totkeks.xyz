@@ -18,17 +18,24 @@
 		<span
 			>version
 			<a
+				class="textlink"
 				:href="`https://github.com/totkeks/totkeks.xyz/commit/${commitHash}`"
 				>{{ commitHash.slice(0, 7) }}</a
 			></span
 		>
 		<span>
 			background by
-			<a href="https://unsplash.com/@aleksandraboguslawska" target="_blank"
+			<a
+				class="textlink"
+				href="https://unsplash.com/@aleksandraboguslawska"
+				target="_blank"
 				>Aleksandra Boguslawska</a
 			>
 			on
-			<a href="https://unsplash.com/photos/_NF9WxYgV34" target="_blank"
+			<a
+				class="textlink"
+				href="https://unsplash.com/photos/_NF9WxYgV34"
+				target="_blank"
 				>Unsplash</a
 			>
 		</span>
@@ -55,14 +62,6 @@ const buildDate = new Date(__BUILD_DATE__);
 			border-left: 1px solid rgba(var(--border-color-rgb), 0.2);
 			padding-left: 0.5em;
 			margin-left: 0.5em;
-		}
-
-		a {
-			text-decoration: underline dotted;
-
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 }
