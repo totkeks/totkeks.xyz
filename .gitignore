@@ -11,3 +11,6 @@ node_modules
 dist
 
 components.d.ts
+
+# Local Netlify folder
+.netlify
