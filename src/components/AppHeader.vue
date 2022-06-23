@@ -1,5 +1,5 @@
 <template>
-	<div :class="$style.header">
+	<header :class="$style.header">
 		<h1 :class="$style.name">Norman Dankert</h1>
 		<TextSlider :class="$style.role" :texts="roles" :period="5000" />
 		<picture :class="$style.avatar">
@@ -12,7 +12,7 @@
 				height="122"
 			/>
 		</picture>
-	</div>
+	</header>
 </template>
 
 <script lang="ts" setup>
@@ -80,6 +80,9 @@ $letter-spacing-role: 0.2rem;
 		-webkit-user-drag: none;
 		user-select: none;
 		border-radius: 100%;
+
+		width: 6rem;
+		height: auto;
 	}
 }
 </style>

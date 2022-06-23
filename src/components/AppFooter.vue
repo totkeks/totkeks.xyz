@@ -1,5 +1,5 @@
 <template>
-	<div :class="$style.footer">
+	<footer :class="$style.footer">
 		<span>© totkeks</span>
 		<span>
 			last update
@@ -39,7 +39,7 @@
 				>Unsplash</a
 			>
 		</span>
-	</div>
+	</footer>
 </template>
 
 <script lang="ts" setup>
@@ -59,7 +59,7 @@ const buildDate = new Date(__BUILD_DATE__);
 
 	span {
 		+ span {
-			border-left: 1px solid rgba(var(--border-color-rgb), 0.2);
+			border-left: 1px solid rgba(var(--border-color-rgb), 0.1);
 			padding-left: 0.5em;
 			margin-left: 0.5em;
 		}
