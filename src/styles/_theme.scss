@@ -8,6 +8,17 @@
 	}
 }
 
+@function overlay() {
+	$gradient-overlay: no-repeat bottom center / cover fixed
+		linear-gradient(
+			60deg,
+			rgba(var(--accent1-color-rgb), 0.5) 5%,
+			rgba(var(--accent2-color-rgb), 0.35)
+		);
+
+	@return $gradient-overlay;
+}
+
 :root {
 	// Colors
 	$colors: (
@@ -27,6 +38,9 @@
 	--accent2-color-rgb: 108, 141, 255;
 	--highlight-color: #91e6cf;
 
+	// Loading overlay
+	--loading-transition: 1.75s ease-out;
+
 	// Card properties
 	--card-padding: 2.5rem;
 	--card-border-radius: 0.5rem;
@@ -37,15 +51,4 @@
 
 	// Typography
 	font: 300 100% Museo Sans, sans-serif;
-}
-
-@function overlay() {
-	$gradient-overlay: no-repeat bottom center / cover fixed
-		linear-gradient(
-			60deg,
-			rgba(var(--accent1-color-rgb), 0.5) 5%,
-			rgba(var(--accent2-color-rgb), 0.35)
-		);
-
-	@return $gradient-overlay;
 }

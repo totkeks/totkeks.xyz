@@ -1,16 +1,14 @@
 <template>
-	<transition name="overlay">
-		<div v-if="!loaded" class="overlay"></div>
-	</transition>
+	<LoadingOverlay />
 
 	<section class="card">
 		<header class="header">
 			<AppHeader />
 		</header>
 
-		<main class="main">
+		<!-- <main class="main">
 			<router-view />
-		</main>
+		</main> -->
 
 		<footer class="social">
 			<SocialLinks />
@@ -21,16 +19,6 @@
 		<AppFooter />
 	</footer>
 </template>
-
-<script lang="ts" setup>
-import { onMounted, ref } from "vue";
-
-const loaded = ref(false);
-
-onMounted(() => {
-	loaded.value = true;
-});
-</script>
 
 <style lang="scss">
 #app {
@@ -58,7 +46,7 @@ onMounted(() => {
 	grid-template-rows: auto;
 
 	background-color: rgba(var(--background-color-rgb), 0.9);
-	padding: calc(var(--card-padding) / 2) var(--card-padding);
+	padding: var(--card-padding) var(--card-padding) calc(var(--card-padding) / 2);
 	border-radius: var(--card-border-radius);
 }
 
@@ -88,26 +76,5 @@ onMounted(() => {
 
 .footer {
 	grid-area: footer;
-}
-
-.overlay {
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	opacity: 1;
-	z-index: 1;
-	background: overlay(), var(--background-color);
-	pointer-events: none;
-
-	&-leave-active {
-		transition: opacity 1.75s ease-out;
-	}
-
-	&-leave-to {
-		opacity: 0;
-	}
 }
 </style>
