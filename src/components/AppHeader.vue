@@ -1,7 +1,7 @@
 <template>
 	<header :class="$style.header">
 		<h1 :class="$style.name">Norman Dankert</h1>
-		<TextSlider :class="$style.role" :texts="roles" :period="5000" />
+		<TextSlider :class="$style.role" :texts="roles" :period="10000" />
 		<picture :class="$style.avatar">
 			<source srcset="@/assets/avatar.avif" type="image/avif" />
 			<source srcset="@/assets/avatar.webp" type="image/webp" />
