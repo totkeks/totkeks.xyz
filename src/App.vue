@@ -1,4 +1,5 @@
 <template>
+	<AppBackground />
 	<LoadingOverlay />
 
 	<AppLayout>

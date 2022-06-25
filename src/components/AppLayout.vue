@@ -14,8 +14,6 @@
 	</div>
 </template>
 
-<script lang="ts" setup></script>
-
 <style lang="scss" module>
 .layout {
 	display: grid;
@@ -30,9 +28,6 @@
 
 	width: 100vw;
 	min-height: 100vh;
-
-	background: overlay(),
-		no-repeat center / cover fixed url("@/assets/background.avif");
 }
 
 .card {
