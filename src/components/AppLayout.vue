@@ -3,7 +3,7 @@
 		<div :class="$style.card">
 			<AppHeader :class="$style.header" />
 
-			<main :class="$style.main">
+			<main>
 				<slot></slot>
 			</main>
 

@@ -22,21 +22,20 @@
 :root {
 	// Colors
 	$colors: (
+		"foreground-color": #414f57,
+		"foreground-bold-color": #313f47,
+		"foreground-light-color": #616f77,
+
 		"background-color": #ffffff,
+		"background-alt-color": #e1dfe8,
+
+		"border-color": #c8cccf,
+
+		"accent1-color": #7cecb4,
+		"accent2-color": #6c8dff,
+		"highlight-color": #91e6cf,
 	);
 	@include generate-color-variables($colors);
-
-	--background-alt-color: #e1dfe8;
-	--foreground-color: #414f57;
-	--foreground-bold-color: #313f47;
-	--foreground-light-color: #616f77;
-	--border-color: #c8cccf;
-	--border-color-rgb: 200, 204, 207;
-	--accent1-color: #7cecb4;
-	--accent1-color-rgb: 126, 237, 181;
-	--accent2-color: #6c8dff;
-	--accent2-color-rgb: 108, 141, 255;
-	--highlight-color: #91e6cf;
 
 	// Loading overlay
 	--loading-transition: 1.75s ease-out;
@@ -51,4 +50,5 @@
 
 	// Typography
 	font: 300 clamp(0.625rem, 1vw + 0.5rem, 1.5rem) Museo Sans, sans-serif;
+	color: var(--foreground-color);
 }

@@ -50,7 +50,7 @@ $letter-spacing-role: 0.2rem;
 	margin: 0 (-$letter-spacing-name) 0 0;
 	border-bottom: 1px solid var(--border-color);
 
-	font: 100 1.6rem/0.9 Museo Sans, sans-serif;
+	font: 500 1.6rem/0.9 Museo Sans, sans-serif;
 	letter-spacing: $letter-spacing-name;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -64,7 +64,7 @@ $letter-spacing-role: 0.2rem;
 
 	margin: 0 (-$letter-spacing-role) 0 0;
 
-	font: 300 1rem Museo Sans, sans-serif;
+	font: 500 1rem Museo Sans, sans-serif;
 	letter-spacing: $letter-spacing-role;
 	text-transform: uppercase;
 	color: var(--foreground-color);

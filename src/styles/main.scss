@@ -10,9 +10,14 @@
 }
 
 .textlink {
-	text-decoration: underline dotted;
+	border-bottom: 1px solid var(--highlight-color);
+	box-shadow: inset 0 -1px 0 var(--highlight-color);
+	transition: background 0.3s ease, color 0.3s ease;
+	padding: 0 0.25rem;
+	display: inline-block;
 
 	&:hover {
-		text-decoration: underline;
+		background: var(--highlight-color);
+		color: var(--foreground-bold-color);
 	}
 }
