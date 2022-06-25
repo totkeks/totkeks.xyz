@@ -1,19 +1,40 @@
 <template>
-	<p>
-		Hej visitor 👋<br />My name is Norman, though on the internet I go by
-		totkeks.
-	</p>
-	<p>
-		For professional inquiries you can find my resumé and contact me on
-		<a
-			class="textlink"
-			href="https://www.linkedin.com/in/norman-dankert/"
-			target="_blank"
-			>LinkedIn</a
-		>. I also prepared a
-		<router-link :to="{ name: 'Job' }" class="textlink"
-			>special page for recruiters</router-link
-		>
-		that makes it easy to see if your offer matches my preferences.
-	</p>
+	<section :class="$style.landing">
+		<p>
+			<span :class="$style.greeting">Hej,👋</span>welcome to my site! I'm a
+			software engineer, tech enthusiast, nature lover and gamer from Germany.
+		</p>
+		<p>
+			My core professional values are humor, candor and transparency. Whereas my
+			main motivators are <em>autonomy</em>, <em>mastery</em> and
+			<em>purpose</em>.
+		</p>
+		<p>
+			I compiled my
+			<router-link :to="{ name: 'Job' }" class="textlink"
+				>job preferences</router-link
+			>
+			as a guideline for recruiters and headhunters.
+		</p>
+	</section>
 </template>
+
+<style lang="scss" module>
+.landing {
+	p {
+		text-align: justify;
+		line-height: 1.5rem;
+	}
+
+	p + p {
+		margin-block-start: 0.5rem;
+	}
+}
+
+.greeting {
+	float: left;
+	// slightly reduced line-height to fix rounding glitches
+	font: 500 2rem/2.99rem Museo Sans, sans-serif;
+	padding-right: 0.5rem;
+}
+</style>

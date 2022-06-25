@@ -2,6 +2,6 @@
 	<LoadingOverlay />
 
 	<AppLayout>
-		<!-- <RouterView /> -->
+		<RouterView />
 	</AppLayout>
 </template>
