@@ -3,6 +3,7 @@
 		<span>© totkeks</span>
 		<span>
 			last update
+			<time :datetime="buildDate.toISOString()">
 			{{
 				buildDate.toLocaleString([], {
 					dateStyle: "short",
@@ -14,6 +15,7 @@
 					timeStyle: "short",
 				})
 			}}
+			</time>
 		</span>
 		<span
 			>version
