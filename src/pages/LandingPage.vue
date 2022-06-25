@@ -34,7 +34,7 @@
 .greeting {
 	float: left;
 	// slightly reduced line-height to fix rounding glitches
-	font: 500 2rem/2.99rem Museo Sans, sans-serif;
+	font: 400 2rem/2.99rem Marcellus SC, serif;
 	padding-right: 0.5rem;
 }
 </style>

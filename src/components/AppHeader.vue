@@ -39,7 +39,7 @@ $letter-spacing-role: 0.2rem;
 		"name avatar" 1fr
 		"role avatar" 1fr /
 		min-content auto;
-	gap: 0.5rem 1rem;
+	column-gap: 1rem;
 }
 
 .name {
@@ -50,9 +50,8 @@ $letter-spacing-role: 0.2rem;
 	margin: 0 (-$letter-spacing-name) 0 0;
 	border-bottom: 1px solid var(--border-color);
 
-	font: 500 1.6rem/0.9 Museo Sans, sans-serif;
+	font: 400 2.25rem/0.9 Marcellus SC, serif;
 	letter-spacing: $letter-spacing-name;
-	text-transform: uppercase;
 	white-space: nowrap;
 	color: var(--foreground-bold-color);
 }
@@ -62,12 +61,12 @@ $letter-spacing-role: 0.2rem;
 	align-self: start;
 	text-align: right;
 
-	margin: 0 (-$letter-spacing-role) 0 0;
+	margin: 0.25rem (-$letter-spacing-role) 0 0;
 
-	font: 500 1rem Museo Sans, sans-serif;
+	font: 400 1rem Marcellus SC, serif;
 	letter-spacing: $letter-spacing-role;
 	text-transform: uppercase;
-	color: var(--foreground-color);
+	color: var(--foreground-bold-color);
 }
 
 .avatar {
