@@ -18,15 +18,14 @@
 <script lang="ts" setup>
 const roles = [
 	"Computer Scientist",
+	"Research Intern",
+	"Research Assistant",
+	"Hardware Design Engineer",
+	"IT Trainee",
+	"IT Project Manager",
 	"Front-End Developer",
 	"Full Stack Developer",
-	"Hardware Design Engineer",
-	"Research Intern",
-	"IT Project Manager",
-	"IT Trainee",
 	"Product Owner",
-	"Research Assistant",
-	"Software Engineer",
 ];
 </script>
 
