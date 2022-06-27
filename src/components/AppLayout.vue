@@ -1,7 +1,7 @@
 <template>
 	<div :class="$style.layout">
 		<div :class="$style.card">
-			<AppHeader :class="$style.header" />
+			<component :is="headerComponent" :class="$style.header" />
 
 			<main>
 				<slot></slot>
@@ -13,6 +13,17 @@
 		<AppFooter :class="$style.footer" />
 	</div>
 </template>
+
+<script lang="ts" setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import BigHeader from "./BigHeader.vue";
+import SmallHeader from "./SmallHeader.vue";
+
+const headerComponent = computed(() =>
+	useRoute().name === "Home" ? BigHeader : SmallHeader
+);
+</script>
 
 <style lang="scss" module>
 .layout {

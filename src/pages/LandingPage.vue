@@ -6,7 +6,7 @@
 		</p>
 		<p>
 			I compiled my
-			<router-link :to="{ name: 'Job' }">job preferences</router-link>
+			<router-link to="/job-preferences">job preferences</router-link>
 			as a guideline for recruiters and headhunters.
 		</p>
 	</section>
