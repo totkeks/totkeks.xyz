@@ -14,16 +14,9 @@ export default defineConfig({
 	plugins: [
 		Vue(),
 		Components({
-			dirs: ["src/pages", "src/components"],
+			dirs: ["src/components"],
 		}),
 	],
-	css: {
-		preprocessorOptions: {
-			scss: {
-				additionalData: `@import "src/styles/globals";`,
-			},
-		},
-	},
 	resolve: {
 		alias: {
 			"@/": new URL("./src/", import.meta.url).pathname,

@@ -27,7 +27,7 @@
 		<span>
 			background by
 			<a href="https://unsplash.com/@aleksandraboguslawska" target="_blank"
-				>Aleksandra Boguslawska</a
+				>Aleksandra</a
 			>
 			on
 			<a href="https://unsplash.com/photos/_NF9WxYgV34" target="_blank"
@@ -43,13 +43,16 @@ const buildDate = new Date(__BUILD_DATE__);
 </script>
 
 <style lang="scss" module>
+@use "@/styles/typography";
+
 .footer {
+	@include typography.footer;
+
 	display: flex;
 	justify-content: center;
 
 	background: rgba(var(--background-color-rgb), 0.1);
-	font-size: 0.6rem;
-	padding: 0.3em;
+	padding: 0.5em;
 
 	span + span {
 		border-left: 1px solid rgba(var(--foreground-color-rgb), 0.5);
@@ -58,11 +61,7 @@ const buildDate = new Date(__BUILD_DATE__);
 	}
 
 	a {
-		border-bottom: 1px dotted var(--foreground-color);
-
-		&:hover {
-			border-bottom-style: solid;
-		}
+		@include typography.footer-link;
 	}
 }
 </style>

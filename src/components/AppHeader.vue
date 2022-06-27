@@ -30,6 +30,7 @@ const roles = [
 </script>
 
 <style lang="scss" module>
+@use "@/styles/typography";
 $letter-spacing-name: 0.1rem;
 $letter-spacing-role: 0.2rem;
 
@@ -43,30 +44,28 @@ $letter-spacing-role: 0.2rem;
 }
 
 .name {
+	@include typography.heading;
+
 	grid-area: name;
 	align-self: end;
 	text-align: right;
 
 	margin: 0 (-$letter-spacing-name) 0 0;
-	border-bottom: 1px solid var(--border-color);
 
-	font: 400 2.25rem/0.9 Marcellus SC, serif;
 	letter-spacing: $letter-spacing-name;
 	white-space: nowrap;
-	color: var(--foreground-bold-color);
 }
 
 .role {
+	@include typography.subheading;
+
 	grid-area: role;
 	align-self: start;
 	text-align: right;
 
 	margin: 0.25rem (-$letter-spacing-role) 0 0;
 
-	font: 400 1rem Marcellus SC, serif;
 	letter-spacing: $letter-spacing-role;
-	text-transform: uppercase;
-	color: var(--foreground-bold-color);
 }
 
 .avatar {

@@ -13,6 +13,8 @@
 </template>
 
 <style lang="scss" module>
+@use "@/styles/utils";
+
 .image,
 .overlay {
 	pointer-events: none;
@@ -26,6 +28,6 @@
 }
 
 .overlay {
-	background: overlay();
+	background: utils.overlay();
 }
 </style>

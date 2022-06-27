@@ -1,5 +1,5 @@
 <template>
-	<footer :class="$style.social">
+	<section :class="$style.social">
 		<a
 			href="https://www.linkedin.com/in/norman-dankert/"
 			target="_blank"
@@ -14,10 +14,8 @@
 		>
 			<IconGitHub :class="$style.icon" />
 		</a>
-	</footer>
+	</section>
 </template>
-
-<script lang="ts" setup></script>
 
 <style lang="scss" module>
 .social {

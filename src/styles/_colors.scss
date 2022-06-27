@@ -1,0 +1,20 @@
+@use "utils";
+
+$-colors: (
+	"foreground-color": #414f57,
+	"foreground-bold-color": #313f47,
+	"foreground-light-color": #616f77,
+
+	"background-color": #ffffff,
+	"background-alt-color": #e1dfe8,
+
+	"border-color": #c8cccf,
+
+	"accent1-color": #7cecb4,
+	"accent2-color": #6c8dff,
+	"highlight-color": #91e6cf,
+);
+
+:root {
+	@include utils.generate-color-variables($-colors);
+}
