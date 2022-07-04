@@ -1,6 +1,6 @@
 <template>
 	<footer :class="$style.footer">
-		<span>© totkeks</span>
+		<span>©&nbsp;totkeks</span>
 		<span>
 			last update
 			<time :datetime="buildDate.toISOString()">
@@ -8,8 +8,7 @@
 					buildDate.toLocaleString([], {
 						dateStyle: "short",
 					})
-				}}
-				{{
+				}}&nbsp;{{
 					buildDate.toLocaleString([], {
 						hour12: false,
 						timeStyle: "short",
@@ -50,6 +49,7 @@ const buildDate = new Date(__BUILD_DATE__);
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	background: rgba(var(--background-color-rgb), 0.1);
 	padding: 0.5em;
@@ -58,6 +58,7 @@ const buildDate = new Date(__BUILD_DATE__);
 		border-left: 1px solid rgba(var(--foreground-color-rgb), 0.5);
 		padding-left: 0.5em;
 		margin-left: 0.5em;
+		text-align: center;
 	}
 
 	a {
