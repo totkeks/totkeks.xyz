@@ -1,7 +1,5 @@
 <template>
 	<header :class="$style.header">
-		<h1 :class="$style.name">Norman Dankert</h1>
-		<TextSlider :class="$style.role" :texts="roles" :period="10000" />
 		<picture :class="$style.avatar">
 			<source srcset="@/assets/avatar.avif" type="image/avif" />
 			<source srcset="@/assets/avatar.webp" type="image/webp" />
@@ -12,6 +10,8 @@
 				height="122"
 			/>
 		</picture>
+		<h1 :class="$style.name">Norman Dankert</h1>
+		<TextSlider :class="$style.role" :texts="roles" :period="10000" />
 	</header>
 </template>
 
@@ -37,40 +37,33 @@ $letter-spacing-role: 0.2rem;
 .header {
 	display: grid;
 	grid-template:
-		"name avatar" 1fr
-		"role avatar" 1fr /
-		min-content auto;
-	column-gap: 1rem;
+		"avatar" auto
+		"." 1rem
+		"name" auto
+		"role" 2.5rem /
+		auto;
+	text-align: center;
+	justify-content: center;
 }
 
 .name {
 	@include typography.heading;
 
 	grid-area: name;
-	align-self: end;
-	text-align: right;
-
 	margin: 0 (-$letter-spacing-name) 0 0;
-
 	letter-spacing: $letter-spacing-name;
-	white-space: nowrap;
 }
 
 .role {
 	@include typography.subheading;
 
 	grid-area: role;
-	align-self: start;
-	text-align: right;
-
 	margin: 0.25rem (-$letter-spacing-role) 0 0;
-
 	letter-spacing: $letter-spacing-role;
 }
 
 .avatar {
 	grid-area: avatar;
-	align-self: center;
 	line-height: 0;
 
 	> img {
@@ -80,6 +73,25 @@ $letter-spacing-role: 0.2rem;
 
 		width: 6rem;
 		height: auto;
+	}
+}
+
+@media screen and (min-width: 32rem) {
+	.header {
+		grid-template:
+			"name avatar" 1fr
+			"role avatar" 1fr /
+			auto auto;
+		column-gap: 1rem;
+		text-align: right;
+	}
+
+	.name {
+		align-self: end;
+	}
+
+	.role {
+		align-self: start;
 	}
 }
 </style>

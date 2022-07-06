@@ -1,13 +1,13 @@
 <template>
 	<div :class="$style.layout">
 		<div :class="$style.card">
-			<component :is="headerComponent" :class="$style.header" />
+			<component :is="headerComponent" />
 
 			<main>
 				<slot></slot>
 			</main>
 
-			<SocialLinks :class="$style.social" />
+			<SocialLinks />
 		</div>
 
 		<AppFooter :class="$style.footer" />
@@ -28,14 +28,13 @@ const headerComponent = computed(() =>
 <style lang="scss" module>
 .layout {
 	display: grid;
-	row-gap: 1rem;
 
 	grid-template:
 		". . ." 2fr
 		". c ." auto
-		". . ." 3fr
+		". . ." minmax(1.5rem, 3fr)
 		"f f f" auto /
-		1fr auto 1fr;
+		1fr clamp(20rem, 100vw, 80ch) 1fr;
 
 	width: 100vw;
 	min-height: 100vh;
@@ -44,25 +43,15 @@ const headerComponent = computed(() =>
 .card {
 	grid-area: c;
 
-	display: grid;
-	grid-template-columns: min-content;
-	grid-template-rows: auto;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+	row-gap: calc(var(--card-padding) / 2);
 
 	background-color: rgba(var(--background-color-rgb), 0.8);
 	padding: var(--card-padding) var(--card-padding) calc(var(--card-padding) / 2);
 	border-radius: var(--card-border-radius);
-}
-
-.header {
-	border-bottom: 1px solid rgba(var(--border-color-rgb), 0.3);
-	padding-bottom: calc(var(--card-padding) / 2);
-	margin-bottom: calc(var(--card-padding) / 2);
-}
-
-.social {
-	border-top: 1px solid rgba(var(--border-color-rgb), 0.3);
-	padding-top: calc(var(--card-padding) / 2);
-	margin-top: calc(var(--card-padding) / 2);
 }
 
 .footer {
