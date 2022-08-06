@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from "vue-router";
 import LandingPage from "@/pages/LandingPage.vue";
-import JobPreferencesPage from "@/pages/JobPreferencesPage.vue";
 
 const routes: RouteRecordRaw[] = [
 	{
@@ -10,8 +9,8 @@ const routes: RouteRecordRaw[] = [
 	},
 	{
 		path: "/job-preferences",
-		name: "Job",
-		component: JobPreferencesPage,
+		name: "Job Preferences",
+		component: () => import("@/pages/JobPreferencesPage.vue"),
 	},
 	{
 		path: "/:pathMatch(.*)*",

@@ -20,6 +20,8 @@ const props = defineProps<{
 const text = ref("");
 
 const nextText = () => {
+	if (props.texts.length <= 1) return;
+
 	let newText: string;
 	do {
 		newText = props.texts[Math.floor(Math.random() * props.texts.length)];

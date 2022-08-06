@@ -1,0 +1,50 @@
+$heading-font: Marcellus SC, serif;
+$body-font: Museo Sans, sans-serif;
+
+@mixin heading {
+	font: 400 2.25rem/0.9 $heading-font;
+	color: var(--foreground-bold-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+@mixin subheading {
+	font: 600 1rem $heading-font;
+	text-transform: uppercase;
+	color: var(--foreground-bold-color);
+}
+
+@mixin body {
+	font: 300 1rem/1.5 $body-font;
+	color: var(--foreground-color);
+}
+
+@mixin drop-cap {
+	font: 400 2em $heading-font;
+	padding-right: 0.25em;
+}
+
+@mixin footer {
+	font: 300 0.625rem $body-font;
+	color: var(--foreground-color);
+}
+
+@mixin inline-link {
+	border-bottom: 1px solid var(--highlight-color);
+	box-shadow: inset 0 -1px 0 var(--highlight-color);
+	transition: background 0.3s ease, color 0.3s ease;
+	padding: 0 0.25em;
+	display: inline-block;
+
+	&:hover {
+		background: var(--highlight-color);
+		color: var(--foreground-bold-color);
+	}
+}
+
+@mixin footer-link {
+	border-bottom: 1px dotted var(--foreground-color);
+
+	&:hover {
+		border-bottom-style: solid;
+	}
+}
