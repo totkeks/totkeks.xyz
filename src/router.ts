@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
 	},
 	{
 		path: "/job-preferences",
-		name: "Job",
+		name: "Job Preferences",
 		component: () => import("@/pages/JobPreferencesPage.vue"),
 	},
 	{
