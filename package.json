@@ -13,7 +13,8 @@
 		"lint": "eslint --ext .ts,.vue src && stylelint **/*.vue",
 		"lint:fix": "eslint --fix --ext .ts,.vue src && stylelint --fix **/*.vue",
 		"prepare": "husky install",
-		"setup:yarn": "yarn dlx @yarnpkg/sdks vscode"
+		"yarn:setup": "yarn dlx @yarnpkg/sdks vscode",
+		"yarn:update": "yarn set version latest"
 	},
 	"dependencies": {
 		"vue": "^3.2.45",
@@ -45,5 +46,5 @@
 		"vue-eslint-parser": "^9.1.0",
 		"vue-tsc": "^1.0.10"
 	},
-	"packageManager": "yarn@3.2.3"
+	"packageManager": "yarn@3.3.0"
 }
