@@ -1,0 +1,22 @@
+@use "reset";
+@use "fonts";
+@use "utils";
+@use "colors";
+
+:root {
+	@include utils.disable-scrollbar;
+
+	// Loading overlay
+	--loading-transition: 1.75s ease-out;
+
+	// Card properties
+	--card-padding: 2.5rem;
+	--card-border-radius: 0.5rem;
+
+	// Text slider
+	--slider-duration: 0.75s;
+	--slider-transform: translateX(2em);
+
+	// Responsiveness
+	// font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+}

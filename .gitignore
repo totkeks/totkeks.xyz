@@ -1,0 +1,16 @@
+# Yarn v2+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+!.yarn/cache
+
+node_modules
+dist
+
+components.d.ts
+
+# Local Netlify folder
+.netlify

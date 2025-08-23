@@ -1,0 +1,28 @@
+@use "sass:color";
+
+@mixin generate-color-variables($hexColors) {
+	@each $name, $hexColor in $hexColors {
+		--#{$name}: #{$hexColor};
+		--#{$name}-rgb: #{color.red($hexColor)}, #{color.green($hexColor)},
+			#{color.blue($hexColor)};
+	}
+}
+
+@mixin disable-scrollbar {
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@function overlay() {
+	$gradient-overlay: no-repeat bottom center / cover fixed
+		linear-gradient(
+			60deg,
+			rgba(var(--accent1-color-rgb), 0.5) 5%,
+			rgba(var(--accent2-color-rgb), 0.35)
+		);
+
+	@return $gradient-overlay;
+}
