@@ -1,7 +1,27 @@
 {
+	"$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
 	"name": "totkeks-xyz",
 	"compatibility_date": "2025-08-23",
 	"assets": {
 		"directory": "./dist"
+	},
+	"workers_dev": false,
+	"preview_urls": false,
+	"routes": [
+		{
+			"pattern": "totkeks.xyz",
+			"custom_domain": true
+		}
+	],
+	"env": {
+		"develop": {
+			"name": "totkeks-xyz-develop",
+			"routes": [
+				{
+					"pattern": "dev.totkeks.xyz",
+					"custom_domain": true
+				}
+			]
+		}
 	}
 }
