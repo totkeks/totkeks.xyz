@@ -7,15 +7,17 @@
 	},
 	"workers_dev": false,
 	"preview_urls": false,
-	"routes": [
-		{
-			"pattern": "totkeks.xyz",
-			"custom_domain": true
-		}
-	],
 	"env": {
+		"production": {
+			"name": "totkeks-xyz",
+			"routes": [
+				{
+					"pattern": "totkeks.xyz",
+					"custom_domain": true
+				}
+			]
+		},
 		"develop": {
-			"name": "totkeks-xyz-develop",
 			"routes": [
 				{
 					"pattern": "dev.totkeks.xyz",
