@@ -1,0 +1,16 @@
+# Yarn v2
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+# With zero install
+!.yarn/cache
+# Without zero install
+#.pnp.*
+
+# Dependency directories
+node_modules/
+
+# Output directories
+dist/

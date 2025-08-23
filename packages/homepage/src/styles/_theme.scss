@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
+
+:root {
+	// Colors
+	--page-background-color: #f4f4f4;
+	--content-background-color: #fff;
+	--border-color: #e2e2e2; /* actually #a0a0a0 with 0.3 opacity */
+	--primary-text-color: #3c3c3c; /* headlines */
+	--secondary-text-color: #646464; /* text and subheadlines */
+	--highlight-color: #2eb8ac;
+
+	// Spacings
+	--large-spacing: 3rem;
+	--medium-spacing: 1.25rem;
+	--small-spacing: 1rem;
+
+	--slider-duration: 0.75s;
+	--slider-transform: translateX(2em);
+}
+
+// Typography
+// 0.7rem/0.25em 400 uppercase secondary color: subheadline, navigation
+// 800 and primary color for strong version
+// 0.9rem for webpage subtitle
+// 2rem/0.25em 900 uppercase: webpage title
+
+// title font
+// paragraph font
+
+@mixin title-font {
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+}
+
+@mixin typo-heading {
+	@include title-font;
+
+	font-size: 1.5rem;
+	font-weight: 900;
+
+	color: var(--primary-text-color);
+}
+
+@mixin typo-subheading($strong: false) {
+	@include title-font;
+
+	font-size: 0.7rem;
+
+	@if ($strong) {
+		font-weight: 800;
+		letter-spacing: 0.25rem;
+
+		color: var(--primary-text-color);
+	} @else {
+		font-weight: 400;
+
+		color: var(--secondary-text-color);
+	}
+}

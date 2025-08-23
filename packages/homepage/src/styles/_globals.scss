@@ -1,0 +1,38 @@
+@import "theme";
+
+@mixin animated-line($thickness: 0.1em, $gap: 0.2em, $color: currentColor) {
+	position: relative;
+
+	&::before,
+	&::after {
+		height: $thickness;
+		width: 0;
+		position: absolute;
+		bottom: -$gap;
+
+		background-color: $color;
+
+		transition-duration: 0.75s;
+		transition-property: opacity width;
+		transition-timing-function: ease-in-out;
+
+		content: "";
+		opacity: 0;
+	}
+
+	&::before {
+		left: 50%;
+	}
+
+	&::after {
+		right: 50%;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			width: 50%;
+			opacity: 1;
+		}
+	}
+}

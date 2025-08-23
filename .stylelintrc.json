@@ -1,0 +1,22 @@
+{
+	"extends": [
+		"stylelint-config-prettier",
+		"stylelint-config-chrome-devtools-order"
+	],
+	"rules": {
+
+		"order/properties-order": [
+			[],
+			{
+				"severity": "warning"
+			}
+		],
+		"plugin/chrome-devtools-order": [
+			true,
+			{
+				"empty-line-between-categories": true,
+				"severity": "warning"
+			}
+		]
+	}
+}
