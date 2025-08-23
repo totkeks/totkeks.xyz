@@ -1,6 +1,6 @@
 {
 	"$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
-	"name": "totkeks-xyz",
+	"name": "totkeks-xyz-develop",
 	"compatibility_date": "2025-08-23",
 	"assets": {
 		"directory": "./dist"
